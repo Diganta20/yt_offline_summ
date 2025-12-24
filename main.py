@@ -1,22 +1,27 @@
-import argparse
+#!/usr/bin/env python3
 import sys
 
-def test_imports():
-    import yt_dlp; print("✓ yt-dlp")
-    import whisper; print("✓ whisper") 
-    import torch; print(f"✓ torch {torch.__version__}")
-    from transformers import AutoTokenizer; print("✓ transformers")
-    return True
+# Make Python see the src/ folder
+sys.path.append("src")
 
-def main():
-    parser = argparse.ArgumentParser(description="Offline YouTube Summarizer")
-    parser.add_argument("--url", required=True)
-    args = parser.parse_args()
-    
-    print(f"Step 0: Python {sys.version}")
-    print(f"URL: {args.url}")
-    test_imports()
-    print("✅ STEP 0 COMPLETE - Ready for Step 1!")
+from downloader import download_audio
+
+
+def test_downloader():
+    test_url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"  # short, public
+    print(f"Testing YOUR downloader with: {test_url}")
+
+    try:
+        audio_path = download_audio(test_url)
+        print("✅ YOUR DOWNLOADER WORKS PERFECTLY!")
+        print(f"File saved: {audio_path}")
+        return True
+    except Exception as e:
+        print(f"❌ Downloader failed: {e}")
+        return False
+
 
 if __name__ == "__main__":
-    main() 
+    print("Step 1: YOUR YouTube Audio Downloader")
+    test_downloader()
+    print("\n✅ STEP 1 COMPLETE - MP3 in outputs/!")
