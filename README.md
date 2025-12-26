@@ -1,3 +1,6 @@
+Git Hub Repo: https://github.com/Diganta20/yt_offline_summ.git
+Demo vid: https://drive.google.com/file/d/1rLxztjl_pD4vSAF-36jMJXBC_LejyLc_/view?usp=drive_link
+
 Project Overview:
 
 yt_offline_summ is a fully offline, production-ready CLI application that accepts a public YouTube video URL and generates a concise summary of its spoken content.
@@ -51,7 +54,7 @@ A custom text-wrapping mechanism ensures clean, editor-friendly output files and
 
 
 Usage:
-Run python main.py and enter any public YouTube URL when prompted. The app downloads the audio, transcribes it with Whisper, summarizes with T5, then saves outputs/transcript.txt (full transcription) and outputs/summary.txt (concise summary) with 100-character wrapped lines for easy reading.
+Run python main.py and enter any public YouTube URL when prompted. The app downloads the audio, transcribes it with Whisper, summarizes with T5, then saves outputs/transcript.txt (full transcription) and outputs/summary.txt (concise summary) with 100-character wrapped lines for easy reading. Note: Inorder to successfully run this project ffmpeg must be present in your device.
 
 
 Example flow:
