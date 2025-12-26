@@ -70,7 +70,7 @@ def main():
     print("\n--- Summary ---")
     print(summary)
 
-    # 4. Save outputs
+    # 4. Save_outputs
     os.makedirs("outputs", exist_ok=True)
 
     transcript_path = os.path.join("outputs", "transcript.txt")
