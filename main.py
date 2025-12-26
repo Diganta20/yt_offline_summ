@@ -37,8 +37,9 @@ def main():
         print("No URL provided. Exiting.")
         return
 
-    model_size = "base"  # or "tiny" for faster STT
+    model_size = "base" 
 
+    
     # 1. Download
     try:
         audio_path = download_audio(url)
